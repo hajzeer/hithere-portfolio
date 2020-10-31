@@ -3,6 +3,7 @@ import ContactForm from "../components/ContactForm";
 import styled, {createGlobalStyle} from "styled-components";
 import SEO from "../components/seo";
 import Hamburger from "../components/Hamburger";
+import HeaderContact from "../components/Header-contact";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -41,6 +42,7 @@ const Contact = () => (
         <NavStyled>
             <Hamburger/>
         </NavStyled>
+        <HeaderContact/>
         <ContactForm/>
     </>
 )
