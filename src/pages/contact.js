@@ -1,11 +1,7 @@
 import React from "react"
-import styled, {createGlobalStyle} from 'styled-components'
-
-import Header from './../components/Header'
-import About from "../components/About";
-import Services from "../components/Servises";
 import ContactForm from "../components/ContactForm";
-import SEO from './../components/seo'
+import styled, {createGlobalStyle} from "styled-components";
+import SEO from "../components/seo";
 import Hamburger from "../components/Hamburger";
 
 const GlobalStyle = createGlobalStyle`
@@ -35,7 +31,8 @@ background: transparent;
 
 
 
-const IndexPage = () => (
+
+const Contact = () => (
     <>
         <GlobalStyle/>
         <SEO
@@ -44,11 +41,8 @@ const IndexPage = () => (
         <NavStyled>
             <Hamburger/>
         </NavStyled>
-        <Header/>
-        <About/>
-        <Services/>
         <ContactForm/>
     </>
-    )
+)
 
-export default IndexPage
+export default Contact;
