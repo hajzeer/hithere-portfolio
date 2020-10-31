@@ -1,7 +1,6 @@
 import React from "react"
 import ContactForm from "../components/ContactForm";
 import styled, {createGlobalStyle} from "styled-components";
-import SEO from "../components/seo";
 import Hamburger from "../components/Hamburger";
 import HeaderContact from "../components/Header-contact";
 
@@ -36,9 +35,6 @@ background: transparent;
 const Contact = () => (
     <>
         <GlobalStyle/>
-        <SEO
-            title='hiThere | Web development for All'
-        />
         <NavStyled>
             <Hamburger/>
         </NavStyled>

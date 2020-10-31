@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, {createGlobalStyle} from "styled-components";
-import SEO from "../components/seo";
 import Hamburger from "../components/Hamburger";
 import HeaderPortfolio from "../components/Header-portfolio";
 import ContactForm from "../components/ContactForm";
@@ -35,9 +34,6 @@ const portfolio = () => {
     return(
         <>
             <GlobalStyle/>
-            <SEO
-                title='hiThere | Web development for All'
-            />
             <NavStyled>
                 <Hamburger/>
             </NavStyled>
