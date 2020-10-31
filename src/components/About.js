@@ -91,11 +91,13 @@ const About = () => {
             <BackgroundDiv/>
             <ImageStyled ref={el => (ImageRef = el)}
                 src={MyImage}
-                alt='my photo'/>
-                <DivStyled>
-                    <AboutSubject>Why you should to <br/> choose me?</AboutSubject>
-                    <TextStyled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at elit enim. Vivamus dui elit, sollicitudin sit amet commodo ac, sollicitudin non sapien.</TextStyled>
-                </DivStyled>
+                alt='Me'
+                title='Me'
+            />
+            <DivStyled>
+                <AboutSubject>Why you should to <br/> choose me?</AboutSubject>
+                <TextStyled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at elit enim. Vivamus dui elit, sollicitudin sit amet commodo ac, sollicitudin non sapien.</TextStyled>
+            </DivStyled>
         </AboutStyled>
     )
 }

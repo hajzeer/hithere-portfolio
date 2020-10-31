@@ -186,23 +186,22 @@ height: 20px;
     `;
 
     const FacebookIconStyled = styled.i`
-.gg-facebook {
+
     box-sizing: border-box;
     position: relative;
     display: block;
     transform: scale(var(--ggs,1));
     width: 20px;
-    height: 20px
-    color: #000000;
-}
-.gg-facebook::after,
-.gg-facebook::before {
+    height: 20px;
+
+&:after,
+&:before {
     content: "";
     display: block;
     position: absolute;
     box-sizing: border-box
 }
-.gg-facebook::before {
+&:before {
     width: 8px;
     height: 20px;
     border-left: 4px solid;
@@ -210,7 +209,7 @@ height: 20px;
     border-top-left-radius: 5px;
     left: 6px
 }
-.gg-facebook::after {
+&:after {
     width: 10px;
     height: 4px;
     background: currentColor;
@@ -222,7 +221,7 @@ height: 20px;
 
 
     const InstagramIconStyled = styled.i`
-    .gg-instagram {
+
     box-sizing: border-box;
     position: relative;
     display: block;
@@ -232,24 +231,23 @@ height: 20px;
     border-radius: 5px;
     width: 20px;
     height: 20px;
-    color: #000000;
-}
-.gg-instagram::after,
-.gg-instagram::before {
+
+&:after,
+&:before {
     content: "";
     display: block;
     box-sizing: border-box;
     position: absolute
 }
-.gg-instagram::after {
+&:after {
     border: 2px solid;
-    left: 4px;
+    left: 3px;
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    top: 4px
+    top: 3px
 }
-.gg-instagram::before {
+&:before {
     border-radius: 3px;
     width: 2px;
     height: 2px;
@@ -288,10 +286,10 @@ height: 20px;
                 <SendButtonStyle >Send</SendButtonStyle>
                 <ContactDivInnerStyled>
                     <SocialButtonStyled onClick={handleFBSubmit}>
-                        <FacebookIconStyled className="gg-facebook"></FacebookIconStyled>
+                        <FacebookIconStyled></FacebookIconStyled>
                     </SocialButtonStyled>
                     <SocialButtonStyled onClick={handleIGSubmit}>
-                        <InstagramIconStyled className="gg-instagram"></InstagramIconStyled>
+                        <InstagramIconStyled></InstagramIconStyled>
                     </SocialButtonStyled>
                 </ContactDivInnerStyled>
             </ContactFormInner>

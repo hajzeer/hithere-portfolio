@@ -5,7 +5,6 @@ import Header from './../components/Header'
 import About from "../components/About";
 import Services from "../components/Servises";
 import ContactForm from "../components/ContactForm";
-import SEO from './../components/seo'
 import Hamburger from "../components/Hamburger";
 
 const GlobalStyle = createGlobalStyle`
@@ -38,9 +37,6 @@ background: transparent;
 const IndexPage = () => (
     <>
         <GlobalStyle/>
-        <SEO
-            title='hiThere | Web development for All'
-        />
         <NavStyled>
             <Hamburger/>
         </NavStyled>
