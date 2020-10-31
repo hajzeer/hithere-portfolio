@@ -3,6 +3,7 @@ import styled, {createGlobalStyle} from "styled-components";
 import Hamburger from "../components/Hamburger";
 import HeaderPortfolio from "../components/Header-portfolio";
 import ContactForm from "../components/ContactForm";
+import {Helmet} from "react-helmet";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -33,6 +34,9 @@ background: transparent;
 const portfolio = () => {
     return(
         <>
+            <Helmet
+                title='hiThere Studio | Web development for All'
+            />
             <GlobalStyle/>
             <NavStyled>
                 <Hamburger/>

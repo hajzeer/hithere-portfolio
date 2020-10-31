@@ -6,6 +6,7 @@ import About from "../components/About";
 import Services from "../components/Servises";
 import ContactForm from "../components/ContactForm";
 import Hamburger from "../components/Hamburger";
+import {Helmet} from "react-helmet";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -36,6 +37,9 @@ background: transparent;
 
 const IndexPage = () => (
     <>
+        <Helmet
+            title='hiThere Studio | Web development for All'
+        />
         <GlobalStyle/>
         <NavStyled>
             <Hamburger/>
@@ -48,3 +52,4 @@ const IndexPage = () => (
     )
 
 export default IndexPage
+

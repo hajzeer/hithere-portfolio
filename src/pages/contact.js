@@ -3,6 +3,7 @@ import ContactForm from "../components/ContactForm";
 import styled, {createGlobalStyle} from "styled-components";
 import Hamburger from "../components/Hamburger";
 import HeaderContact from "../components/Header-contact";
+import {Helmet} from "react-helmet";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -34,6 +35,9 @@ background: transparent;
 
 const Contact = () => (
     <>
+        <Helmet
+            title='hiThere Studio | Web development for All'
+        />
         <GlobalStyle/>
         <NavStyled>
             <Hamburger/>

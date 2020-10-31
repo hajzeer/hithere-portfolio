@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import {Link} from "gatsby"
 import styled from "styled-components";
 import gsap from "gsap"
-import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 
 const RouterNav = ({visibility, unActive}) => {
 

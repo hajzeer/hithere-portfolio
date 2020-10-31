@@ -11,8 +11,14 @@ const ServicesStyled = styled.section`
     margin: 20px;
     top: 0;
     left: 0;
-    border: none;
+    border-radius: 20px;
     background: #ffffff;
+    
+    
+-webkit-appearance: none;
+-webkit-box-shadow: 0 10px 20px -4px rgba(26, 26, 26,.4); 
+-moz-box-shadow: 0 10px 20px -4px rgba(26, 26, 26,.4); 
+box-shadow: 0 10px 20px -4px rgba(26, 26, 26,.4); 
     
      display: flex;
     flex-direction: column;
