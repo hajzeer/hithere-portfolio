@@ -4,6 +4,8 @@ import Hamburger from "../components/Hamburger";
 import HeaderPortfolio from "../components/Header-portfolio";
 import ContactForm from "../components/ContactForm";
 import {Helmet} from "react-helmet";
+import PortfolioInner from "../components/portfolio";
+import Opinions from "../components/Opinions";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -44,6 +46,8 @@ const portfolio = () => {
                 <Hamburger/>
             </NavStyled>
             <HeaderPortfolio/>
+            <PortfolioInner/>
+            <Opinions/>
             <ContactForm/>
         </>
     )

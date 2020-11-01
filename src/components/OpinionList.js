@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const ServicesStyled = styled.section`
-    
+const OpinionListStyled = styled.section`
     overflow: hidden;
     z-index: 1;
     width: 90%;
@@ -27,46 +26,34 @@ box-shadow: 0 10px 20px -4px rgba(26, 26, 26,.4);
     }
 `;
 
-const AboutSubject = styled.h2`
-
-`;
-
 const TextStyled = styled.p`
     
-    font-size: 20px;
+    font-size: 15px;
     margin: 40px;
 
 `;
 
-const ImageStyled = styled.img`
-width: 35px;
-height: 35px;
-color: #000000;
+const OpinionList = ({items}) => (
+    items.map(({id, name, opinion}) => {
 
-
-`;
-
-const ServicesList = ({items}) => (
-    items.map(({id, name, description, image}) => {
         return(
-        <ServicesStyled key={id}>
-            <AboutSubject>{name}</AboutSubject>
-            <ImageStyled src={image}></ImageStyled>
-            <TextStyled>{description}</TextStyled>
-        </ServicesStyled>
-        )})
+        <OpinionListStyled key={id}>
+            <TextStyled>{opinion}</TextStyled>
+            <TextStyled>{name}</TextStyled>
+        </OpinionListStyled>
+        )
+    })
 )
 
-ServicesList.propTypes = {
+OpinionList.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape( {
         name: PropTypes.string,
-        image: PropTypes.string,
-        description: PropTypes.string
+        opinion: PropTypes.string
     }))
 }
 
-ServicesList.defaultProps = {
+OpinionList.defaultProps = {
     items: []
 }
 
-export default ServicesList;
+export default OpinionList;

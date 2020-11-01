@@ -15,7 +15,7 @@ const RouterNav = ({visibility, unActive}) => {
     right: 0;
     left: 0;
     bottom: 0;
-    background: #35ff30;
+    background: #5deb50;
 
     `;
 
@@ -48,7 +48,7 @@ const RouterNav = ({visibility, unActive}) => {
     const StaggerReveal = (node1, node2) => {
         gsap.from([node1, node2],
             {
-                duration: 1.5,
+                duration: .8,
                 height: 0,
                 transformOrigin: 'left',
                 x: '-100%',
@@ -80,7 +80,7 @@ const RouterNav = ({visibility, unActive}) => {
             tl.fromTo(text1,
                 {opacity: 0, y: '+=10px'},
                 {
-                    opacity: 1, delay: 1, duration: .2, y:0, ease: 'power4.easeOut'
+                    opacity: 1, delay: .8, duration: .2, y:0, ease: 'power4.easeOut'
                 })
                 .fromTo(text2,
                 {opacity: 0, y: '+=10px'},
