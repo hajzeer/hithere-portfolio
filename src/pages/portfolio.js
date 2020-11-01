@@ -36,7 +36,9 @@ const portfolio = () => {
         <>
             <Helmet
                 title='hiThere Studio | Web development for All'
-            />
+            >
+                <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
+            </Helmet>
             <GlobalStyle/>
             <NavStyled>
                 <Hamburger/>

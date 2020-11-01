@@ -3,8 +3,6 @@ import gsap from 'gsap';
 import styled from 'styled-components';
 
 const HeaderContainerStyled = styled.div`
-font-family: 'Archivo Narrow', sans-serif;
-
 width: 100%;
 height: 100vh;
 

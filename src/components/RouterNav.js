@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import {Link} from "gatsby"
 import styled from "styled-components";
 import gsap from "gsap"
@@ -15,7 +15,7 @@ const RouterNav = ({visibility, unActive}) => {
     right: 0;
     left: 0;
     bottom: 0;
-    background: #FFFFFF;
+    background: #35ff30;
 
     `;
 
@@ -25,13 +25,19 @@ const RouterNav = ({visibility, unActive}) => {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
     `;
 
     const StyledLink = styled(Link)`
-    color: #1a1a1a;
+    color: #000000;
     font-size: 40px;
+    font-weight: 800;
     margin: 20px;
+    text-decoration-color: #ffffff;
+    opacity: 0;
+    
+    &:focus {
+    transition: scale(2);
+    }
     
     @media (min-width: 768px) {
         font-size: 50px;
@@ -53,9 +59,13 @@ const RouterNav = ({visibility, unActive}) => {
             })
     }
 
+    let text1 = useRef(null);
+    let text2 = useRef(null);
+    let text3 = useRef(null);
+
     useEffect(() => {
         const RouterNav = document.querySelector(".router__nav")
-
+        const tl = gsap.timeline()
         if(visibility.clicked === false) {
 
             gsap.to(RouterNav, {duration: 1, height: 0, ease: 'Power4.easeOut', stagger: {amount: 0.7}})
@@ -67,15 +77,30 @@ const RouterNav = ({visibility, unActive}) => {
             gsap.to(RouterNav, {duration: 0, css:{display:'block'}})
             gsap.to(RouterNav,{duration: 0, opacity: 1, height: '100%'})
             StaggerReveal(RouterNav)
+            tl.fromTo(text1,
+                {opacity: 0, y: '+=10px'},
+                {
+                    opacity: 1, delay: 1, duration: .2, y:0, ease: 'power4.easeOut'
+                })
+                .fromTo(text2,
+                {opacity: 0, y: '+=10px'},
+                {
+                    opacity: 1, duration: .2, y:0, ease: 'power4.easeOut'
+                })
+                .fromTo(text3,
+                {opacity: 0,  y: '+=10px'},
+                {
+                    opacity: 1, y:0, duration: .2, ease: 'power4.easeOut'
+                })
         }
     }, [visibility])
 
     return (
         <RouterNavStyled className="router__nav">
             <RouterNavInnerStyled>
-                <StyledLink to='/' onClick={unActive}>Home</StyledLink>
-                <StyledLink to='/portfolio' onClick={unActive}>Portfolio</StyledLink>
-                <StyledLink to='/contact' onClick={unActive}>Contact</StyledLink>
+                <StyledLink ref={el => {text1 = el}} to='/' onClick={unActive}>Home</StyledLink>
+                <StyledLink ref={el => {text2 = el}} to='/portfolio' onClick={unActive}>Portfolio</StyledLink>
+                <StyledLink ref={el => {text3 = el}} to='/contact' onClick={unActive}>Contact</StyledLink>
             </RouterNavInnerStyled>
         </RouterNavStyled>
     )
