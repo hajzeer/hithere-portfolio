@@ -38,11 +38,6 @@ opacity: 0;
 position: absolute;
 width: 100%;
 
-&:hover {
-z-index: 9999;
-
-}
-
 `;
 const ImageStyled2 = styled.img`
 opacity: 0;
