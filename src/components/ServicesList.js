@@ -32,7 +32,7 @@ const AboutSubject = styled.h2`
 `;
 
 const TextStyled = styled.p`
-    
+    font-weight: 700;
     font-size: 20px;
     margin: 40px;
 
