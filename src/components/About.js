@@ -106,17 +106,17 @@ const About = () => {
                 <TextStyled>
                     Are you dream about fast, responsive with SEO
                     assist and secure website or e-commerce <span>project which are
-                    exclusively for your business goals?</span>
-                    Nice to meet you, because
+                    exclusively for your business goals? </span>
+                    Here exactly what you need, because
                     I can prepare <span>the best solution for you</span>  <br/>
                     Why?<br/>
                     Firstly, <span>I do not use ready template</span>,
                     all of my projects are <span>create special for you</span><br/>
-                    Secondly, My products come from <span>pure code</span>.
+                    Secondly, My products come from <span>pure code.</span><br/>
                     <span> I do not use any website creators </span>
                      which generate many redundant code in your website. <br/>
                     And the most important.
-                    You as a customer have <span>full technical support</span><br/>
+                    You as my customer have <span>full technical support</span><br/>
                     You are interested in? So <span>let's talk</span>
                 </TextStyled>
             </DivStyled>

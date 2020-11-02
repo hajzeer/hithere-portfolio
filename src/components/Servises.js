@@ -30,7 +30,7 @@ const MyServices = [
     {
       id: 0,
       name: 'RESPONSIVE WEBSITES',
-      description:'Did you know that 53% of total internet time is on mobile devices?' +
+      description:'Did you know that 53% of total internet time is on mobile devices? ' +
           'This is a reason why is so much important to have full responsive website ' +
           ' which is fit with every device which you could find and I know how to do it. ' +
           'Usage of pure code programming save us from any problems with responsive  ',
@@ -43,7 +43,7 @@ const MyServices = [
             'This is a responsibility of landing page. ' +
             'To grow up your ads opportunity and overtake competitor. ' +
             'It might be a normal daily website, but the biggest different ' +
-            'is a type of creation. This website do not present you,' +
+            'is a type of creation. This website do not present you, ' +
             'It prove why you are the best',
         image: Globe
     },
