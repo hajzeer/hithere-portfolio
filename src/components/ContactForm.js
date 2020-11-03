@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const ContactForm = () => {
 
     const ContactFormStyled = styled.div`
+
     width: 100%;
     top: 0;
     left: 0;

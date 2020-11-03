@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import {Link} from "gatsby";
 
 const ServicesStyled = styled.section`
     
@@ -46,6 +47,42 @@ color: #000000;
 
 `;
 
+const ButtonStyle = styled.button`
+margin: 15px;
+height: 30px;
+width 80%;
+border-radius: 25px;
+background-color: #1a1a1a;
+border-color: #1a1a1a;
+border: 3px solid;
+cursor: pointer;
+font-size: 15px;
+font-weight: 900;
+color: #FFFFFF;
+text-decoration: none;
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: center;
+&:hover, &:focus {
+outline: none;
+background: #FFFFFF;
+color: #1a1a1a;
+}
+@media (min-width: 768px) {
+    margin: 20px;
+    height: 45px;
+    font-size: 30px;
+}
+@media (min-width: 1024px) {
+    
+    width: 40%;
+    height: auto;
+    margin: 20px;
+    font-size: 20px;
+}
+`;
+
 const ServicesList = ({items}) => (
     items.map(({id, name, description, image}) => {
         return(
@@ -53,6 +90,7 @@ const ServicesList = ({items}) => (
             <AboutSubject>{name}</AboutSubject>
             <ImageStyled src={image}></ImageStyled>
             <TextStyled>{description}</TextStyled>
+            <ButtonStyle as={Link} to='contact'>Ask about it</ButtonStyle>
         </ServicesStyled>
         )})
 )

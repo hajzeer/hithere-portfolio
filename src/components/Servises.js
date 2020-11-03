@@ -26,6 +26,10 @@ align-items: center;
 justify-content: center;
 `;
 
+const AboutSubject = styled.h2`
+
+`;
+
 const MyServices = [
     {
       id: 0,
@@ -89,6 +93,7 @@ const Services = () => {
     return(
         <ServicesContainerStyled ref={el => (serviceRef = el)}>
             <DivStyled>
+                <AboutSubject>What I could offer you</AboutSubject>
                 <ServicesList ref={serviceRef} items={MyServices}/>
             </DivStyled>
         </ServicesContainerStyled>

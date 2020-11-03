@@ -1,7 +1,5 @@
-import React, {useRef, useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import gsap from 'gsap';
-import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 import MyImage from './../images/my-photo.png';
 
@@ -75,28 +73,10 @@ left: 150px;
 `;
 
 const About = () => {
-    let AboutRef = useRef(null);
-    let ImageRef = useRef(null);
-
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
-
-        gsap.fromTo(ImageRef,
-            {y: 0, x: 0},
-            {duration: 1,
-                y: '350px',
-                ease: 'Power4.easeOut',
-                scrollTrigger: {
-                    trigger: AboutRef,
-                    start: 'top 30%',
-                    scrub: 1
-                }})
-    })
 
     return (
-        <AboutStyled ref={el => (AboutRef = el)}>
-            <BackgroundDiv/>
-            <ImageStyled ref={el => (ImageRef = el)}
+        <AboutStyled>
+            <ImageStyled
                 src={MyImage}
                 alt='Me'
                 title='Me'
