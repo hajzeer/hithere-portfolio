@@ -16,27 +16,34 @@ const PortfolioStyled = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    @media (min-width: 1024px) {
+    
+    flex-direction: row-reverse;
+    
     }
+
 `;
 
 const AboutSubject = styled.h2`
 margin: 0;
 margin-top: 30px;
-padding: 0;
-`;
-
-const TextStyled = styled.p`
-    
-    font-size: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-
+padding: 10px;
+background-color: #5deb50;
+background-size: 50px 50px;
+background-repeat: no-repeat;
 `;
 
 const ImageStyled1 = styled.img`
 opacity: 0;
 position: absolute;
 width: 100%;
+
+@media (min-width: 1024px) {
+width: 100%;
+
+
+}
 
 `;
 const ImageStyled2 = styled.img`
@@ -45,6 +52,20 @@ position: relative;
 width: 40%;
 left: 200px;
 top: 50px;
+
+@media (min-width: 768px) {
+width: 30%;
+left: 500px;
+top: 80px;
+
+}
+
+@media (min-width: 1024px) {
+width: 30%;
+left: 60%;
+top: 40px;
+
+}
 
 
 `;
@@ -71,7 +92,7 @@ justify-content: center;
 const PortfolioList = ({items}) => (
 
 
-    items.map(({id, name, description, imageDesktop, imageMobile}) => {
+    items.map(({id, name, imageDesktop, imageMobile}) => {
         return(
         <PortfolioStyled key={id} >
             <ImageOuterStyled className='PortfolioDiv'>
@@ -80,7 +101,6 @@ const PortfolioList = ({items}) => (
             </ImageOuterStyled>
             <DescriptionOuterStyled>
                 <AboutSubject>{name}</AboutSubject>
-                <TextStyled>{description}</TextStyled>
             </DescriptionOuterStyled>
         </PortfolioStyled>
         )})
@@ -91,7 +111,6 @@ PortfolioList.propTypes = {
         name: PropTypes.string,
         imageDesktop: PropTypes.string,
         imageMobile: PropTypes.string,
-        description: PropTypes.string
     }))
 }
 

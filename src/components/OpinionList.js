@@ -30,6 +30,12 @@ const TextStyled = styled.p`
     
     font-size: 15px;
     margin: 40px;
+    
+    @media (min-width: 768px) {
+    
+    font-size: 20px;
+    
+    }
 
 `;
 

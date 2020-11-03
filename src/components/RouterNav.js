@@ -16,6 +16,12 @@ const RouterNav = ({visibility, unActive}) => {
     left: 0;
     bottom: 0;
     background: #5deb50;
+    
+    @media (min-width: 1024px) {
+    
+    width: 30%;
+    
+    }
 
     `;
 

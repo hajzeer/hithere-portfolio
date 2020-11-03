@@ -26,14 +26,12 @@ const PortfolioItems = [
         name: 'Srebrna Ćma Tattoo Studio',
         imageDesktop: SrebrnaCmaImageDesktop,
         imageMobile: SrebrnaCmaImageMobile,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi dui, viverra id nulla eget, aliquet lobortis est. Praesent aliquet malesuada tristique. Duis vel faucibus nunc. Nulla nec rutrum risus.'
     },
     {
         id: 1,
         name: 'Grupa CODA',
         imageDesktop: GrupaCODAImageDesktop,
         imageMobile: GrupaCODAImageMobile,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi dui, viverra id nulla eget, aliquet lobortis est. Praesent aliquet malesuada tristique. Duis vel faucibus nunc. Nulla nec rutrum risus.'
 
     },
     {
@@ -41,15 +39,12 @@ const PortfolioItems = [
         name: 'Symetria Promienista',
         imageDesktop: SymetriaImageDesktop,
         imageMobile: SymetriaImageMobile,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi dui, viverra id nulla eget, aliquet lobortis est. Praesent aliquet malesuada tristique. Duis vel faucibus nunc. Nulla nec rutrum risus.'
     },
     {
         id: 3,
         name: 'Autoserwis',
         imageDesktop: AutoserwisImageDesktop,
         imageMobile: AutoserwisImageMobile,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi dui, viverra id nulla eget, aliquet lobortis est. Praesent aliquet malesuada tristique. Duis vel faucibus nunc. Nulla nec rutrum risus.'
-
     }
 ]
 

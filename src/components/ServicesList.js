@@ -25,7 +25,14 @@ box-shadow: 0 10px 20px -4px rgba(26, 26, 26,.4);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    }
+    
+    @media (min-width: 1024px) {
+    
+    width: 30%;
+    height: auto;
+    margin: 20px;
+    font-size: 20px;
+}
 `;
 
 const AboutSubject = styled.h2`
@@ -72,7 +79,7 @@ color: #1a1a1a;
 @media (min-width: 768px) {
     margin: 20px;
     height: 45px;
-    font-size: 30px;
+    font-size: 25px;
 }
 @media (min-width: 1024px) {
     

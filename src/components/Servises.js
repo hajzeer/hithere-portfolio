@@ -13,6 +13,8 @@ overflow: hidden;
 width: 100%;
 height: auto; 
 background: #99ff00;
+text-align: center;
+
 `;
 
 const DivStyled = styled.div`
@@ -20,10 +22,18 @@ z-index:999;
 width: 100%;
 background: transparent;
 
+
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
+@media (min-width: 1024px) {
+
+
+flex-direction: row;
+align-items: flex-start;
+}
 `;
 
 const AboutSubject = styled.h2`
@@ -92,8 +102,8 @@ const Services = () => {
 
     return(
         <ServicesContainerStyled ref={el => (serviceRef = el)}>
+            <AboutSubject>What I could offer you</AboutSubject>
             <DivStyled>
-                <AboutSubject>What I could offer you</AboutSubject>
                 <ServicesList ref={serviceRef} items={MyServices}/>
             </DivStyled>
         </ServicesContainerStyled>

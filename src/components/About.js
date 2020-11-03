@@ -8,17 +8,14 @@ overflow: hidden;
 width: 100%;
 height: 100vh;
 
-
-
+@media (min-width: 1024px) {
+display: flex;
+flex-direction: row-reverse;
+justify-content: space-between;
+align-items: center;
+}
 `;
 
-const BackgroundDiv = styled.div`
-position: absolute;
-border-bottom: 100vh solid #99ff00;
-border-right: 100vw solid transparent;
-margin: 0;
-padding: 0;
-`;
 
 const DivStyled = styled.div`
 
@@ -31,11 +28,24 @@ align-items: center;
 
 
 z-index: 99;
+
+@media (min-width: 1024px) {
+position: static;
+width: 50%;
+
+}
 `;
 
 const AboutSubject = styled.h2`
     position: relative;
     top: -200px;
+    
+    @media (min-width: 1024px) {
+top: 0;
+position: static;
+font-size: 1.5em;
+
+}
 `;
 
 const TextStyled = styled.p`
@@ -50,6 +60,13 @@ const TextStyled = styled.p`
     background: #5deb50;
     
     }
+
+@media (min-width: 1024px) {
+top: 0;
+position: static;
+font-size: 1.2em;
+
+}
 
 `;
 
@@ -69,18 +86,44 @@ z-index: 9;
 
 top: 30px;
 left: 150px;
+@media (min-width: 768px) {
+width: 350px;
+height: 350px;
+top: 400px;
+left: 400px;
+
+}
+
+@media (min-width: 1024px) {
+margin: 50px;
+position: static;
+opacity: 1;
+
+}
 
 `;
+
+const ImageDiv = styled.div`
+
+
+@media(min-width: 1024) {
+
+width: 50%;
+}
+
+`
 
 const About = () => {
 
     return (
         <AboutStyled>
-            <ImageStyled
-                src={MyImage}
-                alt='Me'
-                title='Me'
-            />
+            <ImageDiv>
+                <ImageStyled
+                    src={MyImage}
+                    alt='Me'
+                    title='Me'
+                />
+            </ImageDiv>
             <DivStyled>
                 <AboutSubject>Why you should to <br/> choose me?</AboutSubject>
                 <TextStyled>
