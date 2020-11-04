@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useIntl } from 'gatsby-plugin-intl';
 
 import OpinionList from "./OpinionList";
 
@@ -56,14 +57,14 @@ const AboutSubject = styled.h2`
 `;
 
 const Opinions = () => {
-
+const intl = useIntl()
 
 
     return (
         <AboutStyled>
             <BackgroundDiv/>
             <DivStyled>
-                <AboutSubject>Opinions</AboutSubject>
+                <AboutSubject>{intl.formatMessage({id: 'opinion_subject'})}</AboutSubject>
                 <OpinionList items={OpinionItems}/>
             </DivStyled>
         </AboutStyled>

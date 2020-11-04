@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {Link} from "gatsby";
+import {FormattedMessage} from 'gatsby-plugin-intl';
 
 const ServicesStyled = styled.section`
     
@@ -91,13 +92,14 @@ color: #1a1a1a;
 `;
 
 const ServicesList = ({items}) => (
-    items.map(({id, name, description, image}) => {
+
+    items.map(({id, name, image, description}) => {
         return(
         <ServicesStyled key={id}>
             <AboutSubject>{name}</AboutSubject>
             <ImageStyled src={image}></ImageStyled>
             <TextStyled>{description}</TextStyled>
-            <ButtonStyle as={Link} to='contact'>Ask about it</ButtonStyle>
+            <ButtonStyle as={Link} to='contact'><FormattedMessage id='ask_button'/></ButtonStyle>
         </ServicesStyled>
         )})
 )

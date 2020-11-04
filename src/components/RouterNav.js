@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from "react";
 import {Link} from "gatsby"
 import styled from "styled-components";
 import gsap from "gsap"
+import {useIntl} from 'gatsby-plugin-intl';
 
 const RouterNav = ({visibility, unActive}) => {
 
@@ -101,12 +102,14 @@ const RouterNav = ({visibility, unActive}) => {
         }
     }, [visibility])
 
+    const intl = useIntl();
+
     return (
         <RouterNavStyled className="router__nav">
             <RouterNavInnerStyled>
                 <StyledLink ref={el => {text1 = el}} to='/' onClick={unActive}>Home</StyledLink>
                 <StyledLink ref={el => {text2 = el}} to='/portfolio' onClick={unActive}>Portfolio</StyledLink>
-                <StyledLink ref={el => {text3 = el}} to='/contact' onClick={unActive}>Contact</StyledLink>
+                <StyledLink ref={el => {text3 = el}} to='/contact' onClick={unActive}>{intl.formatMessage({id: "contact_header"})}</StyledLink>
             </RouterNavInnerStyled>
         </RouterNavStyled>
     )

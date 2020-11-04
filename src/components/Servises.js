@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import ServicesList from "./ServicesList";
+import {useIntl} from 'gatsby-plugin-intl';
 
 import Globe from './../images/globe.svg';
 import Cart from './../images/shopping-cart.svg';
@@ -81,7 +82,7 @@ const MyServices = [
 const Services = () => {
 
     let serviceRef = useRef(null);
-
+    const intl = useIntl();
     useEffect(() => {
 
         const sections = document.querySelectorAll('section');
@@ -102,7 +103,7 @@ const Services = () => {
 
     return(
         <ServicesContainerStyled ref={el => (serviceRef = el)}>
-            <AboutSubject>What I could offer you</AboutSubject>
+            <AboutSubject>{intl.formatMessage({id: 'services_subject'})}</AboutSubject>
             <DivStyled>
                 <ServicesList ref={serviceRef} items={MyServices}/>
             </DivStyled>

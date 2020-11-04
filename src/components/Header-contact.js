@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import gsap from 'gsap';
 import styled from 'styled-components';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const HeaderContainerStyled = styled.div`
 
@@ -73,7 +74,7 @@ const ArrowDown = styled.i`
 `;
 
 const HeaderContact = () => {
-
+    const intl = useIntl();
     let leftSite = useRef(null);
     let subject = useRef(null);
     let arrow = useRef(null)
@@ -100,7 +101,7 @@ const HeaderContact = () => {
         </HeaderInnerDiv>
         <DivStyled ref={el => (subject = el)}>
             <SubjectStyled>
-                Contact<SpanStyled>.</SpanStyled>
+                {intl.formatMessage({id: "contact_header"})}<SpanStyled>.</SpanStyled>
             </SubjectStyled>
             <ArrowDown ref={el => (arrow = el)}></ArrowDown>
         </DivStyled>

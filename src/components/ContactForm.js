@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const ContactForm = () => {
 
@@ -271,20 +272,21 @@ height: 20px;
     const facebookUrl = 'https://www.facebook.com/hajzeer/';
     const instagramUrl = 'https://www.instagram.com/krzysiuhajder/';
 
+    const intl = useIntl()
     return (
         <ContactFormStyled className="contact">
             <BackgroundDiv/>
             <ContactFormInner className="contact__inner" >
                 <InputStyle type="hidden" name="contact__number"/>
-                <LabelStyled>Name</LabelStyled>
+                <LabelStyled>{intl.formatMessage({id: 'email_name'})}</LabelStyled>
                 <InputStyle type="text" name="user__name"/>
                 <LabelStyled>Email</LabelStyled>
                 <InputStyle type="email" name="user__email"/>
-                <LabelStyled>Subject</LabelStyled>
+                <LabelStyled>{intl.formatMessage({id: 'email_subject'})}</LabelStyled>
                 <InputStyle type="subject" name="subject"/>
-                <LabelStyled>Message</LabelStyled>
+                <LabelStyled>{intl.formatMessage({id: 'email_message'})}</LabelStyled>
                 <TextAreaStyle type="text" name="message"/>
-                <SendButtonStyle >Send</SendButtonStyle>
+                <SendButtonStyle >{intl.formatMessage({id: 'email_button'})}</SendButtonStyle>
                 <ContactDivInnerStyled>
                     <SocialButtonStyled onClick={handleFBSubmit}>
                         <FacebookIconStyled></FacebookIconStyled>
