@@ -45,34 +45,16 @@ const MyServices = [
     {
       id: 0,
       name: 'RESPONSIVE WEBSITES',
-      description:'Did you know that 53% of total internet time is on mobile devices? ' +
-          'This is a reason why is so much important to have full responsive website ' +
-          ' which is fit with every device which you could find and I know how to do it. ' +
-          'Usage of pure code programming save us from any problems with responsive  ',
       image: Mobile
     },
     {
         id: 1,
         name: 'LANDING PAGE',
-        description: 'Why are you better than your market competition? ' +
-            'This is a responsibility of landing page. ' +
-            'To grow up your ads opportunity and overtake competitor. ' +
-            'It might be a normal daily website, but the biggest different ' +
-            'is a type of creation. This website do not present you, ' +
-            'It prove why you are the best',
         image: Globe
     },
     {
         id: 2,
         name: 'E-COMMERCE',
-        description: 'And again I need to tell you about pure code. ' +
-            'Many company which will create your on line shop use ready template ' +
-            'it is fast, it is cheap but only for them, you pay the same price ' +
-            'and your e-commerce project look like any online shop in the web. ' +
-            'Do not be the same like other. BE BETTER, ' +
-            'I prepare template special for you, and create your shop better than ' +
-            'your competition ' +
-            'I will support you after finish production ',
         image: Cart
     }
 ]

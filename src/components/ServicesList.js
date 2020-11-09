@@ -41,6 +41,7 @@ const AboutSubject = styled.h2`
 `;
 
 const TextStyled = styled.p`
+    text-align: left;
     font-weight: 700;
     font-size: 20px;
     margin: 40px;
@@ -92,13 +93,14 @@ color: #1a1a1a;
 `;
 
 const ServicesList = ({items}) => (
-
-    items.map(({id, name, image, description}) => {
+    items.map(({id, name, image}) => {
         return(
         <ServicesStyled key={id}>
             <AboutSubject>{name}</AboutSubject>
             <ImageStyled src={image}></ImageStyled>
-            <TextStyled>{description}</TextStyled>
+            {id === 0 ? (<TextStyled><FormattedMessage id='service_desc0'/></TextStyled>) : (null)}
+            {id === 1 ? (<TextStyled><FormattedMessage id='service_desc1'/></TextStyled>) : (null)}
+            {id === 2 ? (<TextStyled><FormattedMessage id='service_desc2'/></TextStyled>) : (null)}
             <ButtonStyle as={Link} to='contact'><FormattedMessage id='ask_button'/></ButtonStyle>
         </ServicesStyled>
         )})
@@ -107,8 +109,7 @@ const ServicesList = ({items}) => (
 ServicesList.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape( {
         name: PropTypes.string,
-        image: PropTypes.string,
-        description: PropTypes.string
+        image: PropTypes.string
     }))
 }
 
