@@ -26,12 +26,14 @@ const PortfolioItems = [
         name: 'Srebrna Ćma Tattoo Studio',
         imageDesktop: SrebrnaCmaImageDesktop,
         imageMobile: SrebrnaCmaImageMobile,
+        websiteUrl: 'https://srebrnacma.pl/',
     },
     {
         id: 1,
         name: 'Grupa CODA',
         imageDesktop: GrupaCODAImageDesktop,
         imageMobile: GrupaCODAImageMobile,
+        websiteUrl: 'https://codagroup.netlify.app/',
 
     },
     {
@@ -39,12 +41,14 @@ const PortfolioItems = [
         name: 'Symetria Promienista',
         imageDesktop: SymetriaImageDesktop,
         imageMobile: SymetriaImageMobile,
+        websiteUrl: 'https://symetriapromienista.netlify.app/',
     },
     {
         id: 3,
         name: 'Autoserwis',
         imageDesktop: AutoserwisImageDesktop,
         imageMobile: AutoserwisImageMobile,
+        websiteUrl: 'https://autoserwis-lakiernictwo.pl/',
     }
 ]
 

@@ -16,7 +16,7 @@ const RouterNav = ({visibility, unActive}) => {
     right: 0;
     left: 0;
     bottom: 0;
-    background: #5deb50;
+    background: #c2f2f0;
     
     @media (min-width: 1024px) {
     
@@ -71,9 +71,9 @@ const RouterNav = ({visibility, unActive}) => {
     display: ${props => props.display};
     content: '';
     position: absolute;
-        margin: 0;
+    margin: 0;
     padding: 0;
-    width: 4px;
+    width: 2px;
     height: 30px;
     background: #000000;
     left: 50px;

@@ -33,7 +33,7 @@ const ContactForm = () => {
 
     const BackgroundDiv = styled.div`
 position: absolute;
-border-top: 100vh solid #99ff00;
+border-top: 100vh solid #67a6e6;
 border-right: 100vw solid transparent;
 margin: 0;
 padding: 0;

@@ -13,7 +13,7 @@ const ServicesContainerStyled = styled.div`
 overflow: hidden;
 width: 100%;
 height: auto; 
-background: #99ff00;
+background: #67a6e6;
 text-align: center;
 
 `;

@@ -16,7 +16,7 @@ justify-content: center;
 
 const HeaderInnerDiv = styled.div`
 
-border-bottom: 100vh solid #99ff00;
+border-bottom: 100vh solid #67a6e6;
 border-right: 100vw solid transparent;
 margin: 0;
 padding: 0;
@@ -43,7 +43,7 @@ font-weight: 700;
 `;
 
 const SpanStyled = styled.span`
-color: #99ff00;
+color: #67a6e60;
 
 `;
 

@@ -13,5 +13,7 @@
   "email_subject": "Temat",
   "email_message": "Wiadomość",
   "email_button": "Wyślij",
-  "ask_button": "Zadaj pytanie"
+  "ask_button": "Zadaj pytanie",
+
+  "demo__button": "Przejdź do strony"
 }

@@ -13,5 +13,7 @@
   "email_subject": "Subject",
   "email_message": "Message",
   "email_button": "Send",
-  "ask_button": "Ask about it"
+  "ask_button": "Ask about it",
+
+  "demo__button": "Open website"
 }

@@ -32,7 +32,7 @@ height: 100vh;
 
 const BackgroundDiv = styled.div`
 position: absolute;
-border-bottom: 100vh solid #99ff00;
+border-bottom: 100vh solid #67a6e6;
 border-right: 100vw solid transparent;
 margin: 0;
 padding: 0;

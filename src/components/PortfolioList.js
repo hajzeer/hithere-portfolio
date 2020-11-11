@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import {FormattedMessage} from 'gatsby-plugin-intl';
 
 const PortfolioStyled = styled.section`
     
@@ -29,7 +30,7 @@ const AboutSubject = styled.h2`
 margin: 0;
 margin-top: 30px;
 padding: 10px;
-background-color: #5deb50;
+background-color: #c2f2f0;
 background-size: 50px 50px;
 background-repeat: no-repeat;
 `;
@@ -89,10 +90,50 @@ align-items: center;
 justify-content: center;
 `
 
+const ButtonStyle = styled.button`
+margin: 15px;
+height: 30px;
+width 80%;
+border-radius: 25px;
+background-color: #1a1a1a;
+border-color: #1a1a1a;
+border: 3px solid;
+cursor: pointer;
+font-size: 15px;
+font-weight: 900;
+color: #FFFFFF;
+text-decoration: none;
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: center;
+&:hover, &:focus {
+outline: none;
+background: #FFFFFF;
+color: #1a1a1a;
+}
+@media (min-width: 768px) {
+    margin: 20px;
+    height: 45px;
+    font-size: 25px;
+}
+@media (min-width: 1024px) {
+    
+    width: 40%;
+    height: auto;
+    margin: 20px;
+    font-size: 20px;
+}
+`;
+
+const handleClick = (e) => {
+    window.open(e, '_blank')
+}
+
 const PortfolioList = ({items}) => (
 
 
-    items.map(({id, name, imageDesktop, imageMobile}) => {
+    items.map(({id, name, imageDesktop, imageMobile, websiteUrl}) => {
         return(
         <PortfolioStyled key={id} >
             <ImageOuterStyled className='PortfolioDiv'>
@@ -101,6 +142,9 @@ const PortfolioList = ({items}) => (
             </ImageOuterStyled>
             <DescriptionOuterStyled>
                 <AboutSubject>{name}</AboutSubject>
+                <ButtonStyle onClick={() => handleClick(websiteUrl)}>
+                    <FormattedMessage id='demo__button'/>
+                </ButtonStyle>
             </DescriptionOuterStyled>
         </PortfolioStyled>
         )})
@@ -111,6 +155,7 @@ PortfolioList.propTypes = {
         name: PropTypes.string,
         imageDesktop: PropTypes.string,
         imageMobile: PropTypes.string,
+        websiteUrl: PropTypes.string,
     }))
 }
 
