@@ -7,6 +7,7 @@ import ContactForm from "../components/ContactForm";
 import Hamburger from "../components/Hamburger";
 import HeaderContact from "../components/Header-contact";
 import SEO from "../components/seo";
+import logo from "../images/image.png"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -46,7 +47,7 @@ const Contact = ({data}) => (
         <SEO
             title="Contact"
             description={data.site.siteMetadata.description}
-            image={data.file.childImageSharp.fluid}
+            image={logo}
         />
         <GlobalStyle/>
         <NavStyled>
@@ -61,13 +62,6 @@ export const query = graphql`
         site {
             siteMetadata {
                 description
-            }
-        }
-        file(relativePath: {eq:"image.png"}) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
             }
         }
     }

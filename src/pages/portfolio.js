@@ -9,6 +9,7 @@ import ContactForm from "../components/ContactForm";
 import PortfolioInner from "../components/portfolio";
 import Opinions from "../components/Opinions";
 import SEO from "../components/seo";
+import logo from "../images/image.png"
 
 
 const GlobalStyle = createGlobalStyle`
@@ -48,7 +49,7 @@ const portfolio = ({data}) => {
             <SEO
                 title="Portfolio"
                 description={data.site.siteMetadata.description}
-                image={data.file.childImageSharp.fluid}
+                image={logo}
             />
             <GlobalStyle/>
             <NavStyled>
@@ -65,14 +66,8 @@ export const query = graphql`
     query{
         site {
             siteMetadata {
+                title
                 description
-            }
-        }
-        file(relativePath: {eq:"image.png"}) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
             }
         }
     }

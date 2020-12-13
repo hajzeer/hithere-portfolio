@@ -21,21 +21,12 @@ function SEO({ description, lang, meta, title, image }) {
             author
           }
         }
-        file(relativePath: {eq:"image.png"}) {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     `
   )
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const defImage = file.childImageSharp.fluid
-
   return (
     <Helmet
       htmlAttributes={{
@@ -78,7 +69,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: 'og:image',
-          content: defImage
+          content: image
         },
       ].concat(meta)}
     />

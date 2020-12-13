@@ -9,6 +9,7 @@ import Services from "../components/Servises";
 import ContactForm from "../components/ContactForm";
 import Hamburger from "../components/Hamburger";
 import SEO from "../components/seo"
+import logo from "../images/image.png"
 
 
 const GlobalStyle = createGlobalStyle`
@@ -44,9 +45,9 @@ const IndexPage = ({data}) => (
             <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
         </Helmet>
         <SEO
-            title={data.site.siteMetadata.title}
+            title="Home"
             description={data.site.siteMetadata.description}
-            image={data.file.childImageSharp.fluid}
+            image={logo}
         />
         <GlobalStyle/>
         <NavStyled>
@@ -62,14 +63,8 @@ export const query = graphql`
     query{
         site {
             siteMetadata {
+                title
                 description
-            }
-        }
-        file(relativePath: {eq:"image.png"}) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
             }
         }
     }
