@@ -9,7 +9,7 @@ import Globe from './../images/globe.svg';
 import Cart from './../images/shopping-cart.svg';
 import Mobile from './../images/device-mobile.svg';
 
-const ServicesContainerStyled = styled.div`
+const ServicesContainerStyled = styled.section`
 overflow: hidden;
 width: 100%;
 height: auto; 
@@ -67,13 +67,13 @@ const Services = () => {
     const intl = useIntl();
     useEffect(() => {
 
-        const sections = document.querySelectorAll('section');
+        const sections = document.querySelectorAll('.services__list');
         gsap.registerPlugin(ScrollTrigger)
 
         sections.forEach(subject => {
-            gsap.fromTo(subject,
+            gsap.fromTo(subject.children,
                 {opacity: 0, x: '-=500'},
-                {opacity: 1, x: 0, stagger: 0.4, duration: 1, ease: 'power4.Out',
+                {opacity: 1, x: 0, stagger: .5, duration: 1, ease: 'power4.Out',
                     scrollTrigger: {
                         trigger: subject,
                         start: 'top 75%',
@@ -86,7 +86,7 @@ const Services = () => {
     return(
         <ServicesContainerStyled ref={el => (serviceRef = el)}>
             <AboutSubject>{intl.formatMessage({id: 'services_subject'})}</AboutSubject>
-            <DivStyled>
+            <DivStyled className="services__list">
                 <ServicesList ref={serviceRef} items={MyServices}/>
             </DivStyled>
         </ServicesContainerStyled>
