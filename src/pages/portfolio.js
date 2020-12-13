@@ -1,11 +1,15 @@
 import React from 'react';
 import styled, {createGlobalStyle} from "styled-components";
+import {Helmet} from "react-helmet";
+import {graphql} from "gatsby";
+
 import Hamburger from "../components/Hamburger";
 import HeaderPortfolio from "../components/Header-portfolio";
 import ContactForm from "../components/ContactForm";
-import {Helmet} from "react-helmet";
 import PortfolioInner from "../components/portfolio";
 import Opinions from "../components/Opinions";
+import SEO from "../components/seo";
+
 
 const GlobalStyle = createGlobalStyle`
 
@@ -33,14 +37,19 @@ background: transparent;
 `;
 
 
-const portfolio = () => {
+const portfolio = ({data}) => {
+
+
     return(
         <>
-            <Helmet
-                title='hiThere Studio | Web development for All'
-            >
+            <Helmet>
                 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
             </Helmet>
+            <SEO
+                title="Portfolio"
+                description={data.site.siteMetadata.description}
+                image={data.file.childImageSharp.fluid}
+            />
             <GlobalStyle/>
             <NavStyled>
                 <Hamburger/>
@@ -52,4 +61,21 @@ const portfolio = () => {
         </>
     )
 }
+export const query = graphql`
+    query{
+        site {
+            siteMetadata {
+                description
+            }
+        }
+        file(relativePath: {eq:"image.png"}) {
+            childImageSharp {
+                fluid {
+                    src
+                }
+            }
+        }
+    }
+`
+
 export default portfolio;

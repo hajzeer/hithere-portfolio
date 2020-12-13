@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `hiThere Studio | Web development for All`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Marzysz o szybkiej, responsywnej oraz bezpiecznej stronie internetowej lub sklepie, który jest dodatkowo zaprojektowany pod sprawne pozycjonowanie i spełnia twoje cele biznesowe? Potrafię stworzyć dla Ciebie dokładnie to czego potrzebujesz. Dlaczego ja? Przede wszystkim nie korzystam z gotowych szablonów. Każdy mój projekt został stworzony z myślą bycia unikalnym. Po drugie, Moje prace są kodowane w najnowszych technologiach. Nie wykorzystuję gotowych kreatorów stron, które generują masę zbędnego kodu na twojej stronie który utrudnia działanie. Dodatkowo ty jako mój klient posiadasz z mojej strony pełne wsparcie techniczne. Zainteresowany? Porozmawiajmy w takim razie  `,
     author: `hiThere Studio`,
   },
   plugins: [

@@ -1,12 +1,15 @@
 import React from "react"
 import styled, {createGlobalStyle} from 'styled-components'
+import {Helmet} from "react-helmet";
+import {graphql} from "gatsby";
 
 import Header from './../components/Header'
 import About from "../components/About";
 import Services from "../components/Servises";
 import ContactForm from "../components/ContactForm";
 import Hamburger from "../components/Hamburger";
-import {Helmet} from "react-helmet";
+import SEO from "../components/seo"
+
 
 const GlobalStyle = createGlobalStyle`
 
@@ -35,13 +38,16 @@ background: transparent;
 
 
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
     <>
-        <Helmet
-            title='hiThere Studio | Web development for All'
-        >
+        <Helmet>
             <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
         </Helmet>
+        <SEO
+            title={data.site.siteMetadata.title}
+            description={data.site.siteMetadata.description}
+            image={data.file.childImageSharp.fluid}
+        />
         <GlobalStyle/>
         <NavStyled>
             <Hamburger/>
@@ -52,6 +58,23 @@ const IndexPage = () => (
         <ContactForm/>
     </>
     )
+export const query = graphql`
+    query{
+        site {
+            siteMetadata {
+                description
+            }
+        }
+        file(relativePath: {eq:"image.png"}) {
+            childImageSharp {
+                fluid {
+                    src
+                }
+            }
+        }
+    }
+`
+
 
 export default IndexPage
 
