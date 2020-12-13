@@ -47,7 +47,6 @@ const Contact = ({data}) => (
         <SEO
             title="Contact"
             description={data.site.siteMetadata.description}
-            image={logo}
         />
         <GlobalStyle/>
         <NavStyled>
@@ -61,6 +60,7 @@ export const query = graphql`
     query{
         site {
             siteMetadata {
+                title
                 description
             }
         }
