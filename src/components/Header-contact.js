@@ -43,7 +43,7 @@ font-weight: 700;
 `;
 
 const SpanStyled = styled.span`
-color: #67a6e60;
+color: #67a6e6;
 
 `;
 

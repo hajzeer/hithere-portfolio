@@ -9,7 +9,6 @@ const ServicesStyled = styled.section`
     overflow: hidden;
     z-index: 1;
     width: 90%;
-    height: auto;
     margin: 20px;
     top: 0;
     left: 0;
@@ -30,7 +29,7 @@ box-shadow: 0 10px 20px -4px rgba(26, 26, 26,.4);
     @media (min-width: 1024px) {
     
     width: 30%;
-    height: auto;
+    height: 90vh;
     margin: 20px;
     font-size: 20px;
 }
@@ -59,11 +58,11 @@ color: #000000;
 const ButtonStyle = styled.button`
 margin: 15px;
 height: 30px;
-width 80%;
+width: 80%;
 border-radius: 25px;
 background-color: #1a1a1a;
-border-color: #1a1a1a;
-border: 3px solid;
+
+border: 3px #1a1a1a solid;
 cursor: pointer;
 font-size: 15px;
 font-weight: 900;
@@ -84,8 +83,9 @@ color: #1a1a1a;
     font-size: 25px;
 }
 @media (min-width: 1024px) {
-    
-    width: 40%;
+    position: absolute;
+    bottom: 20px;
+    width: 60%;
     height: auto;
     margin: 20px;
     font-size: 20px;

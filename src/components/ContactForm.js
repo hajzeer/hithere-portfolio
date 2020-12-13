@@ -45,9 +45,8 @@ font-size: 15px;
 height: 20px;
 background: transparent;
 color: #000;
-border-color: #000 solid;
 border: none;
-border-bottom: 3px solid;
+border-bottom: 3px #000 solid;
 margin: 15px;
 text-align: center;
 
@@ -83,8 +82,7 @@ width: 80%;
 font-size: 15px;
 height: 100px;
 color: #1a1a1a;
-border-color: #000 solid;
-border-size: 3px solid;
+border: 3px #000 solid;
 resize: none;
 margin-top: 20px;
 

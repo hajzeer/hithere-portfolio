@@ -21,7 +21,8 @@ const RouterNav = ({visibility, unActive}) => {
     @media (min-width: 1024px) {
     
     width: 30%;
-    
+      
+          
     }
 
     `;
@@ -41,11 +42,7 @@ const RouterNav = ({visibility, unActive}) => {
     margin: 20px;
     text-decoration-color: #ffffff;
     opacity: 0;
-    
-    &:focus {
-    transition: scale(2);
-    }
-    
+      
     @media (min-width: 768px) {
         font-size: 50px;
     }

@@ -55,12 +55,6 @@ const TextStyled = styled.p`
     font-size: 1em;
     margin: 40px;
     font-weight: 700;
-    
-    span {
-    
-    background: #5deb50;
-    
-    }
 
 @media (min-width: 1024px) {
 top: 0;
@@ -77,7 +71,7 @@ position: relative;
 width: 200px;
 height: 200px;
 border-radius: 100%;
-opacity: .6;
+opacity: .4;
 -webkit-appearance: none;
 -webkit-box-shadow: 0 10px 20px -4px rgba(26, 26, 26,.4); 
 -moz-box-shadow: 0 10px 20px -4px rgba(26, 26, 26,.4); 
@@ -85,7 +79,7 @@ box-shadow: 0 10px 20px -4px rgba(26, 26, 26,.4);
 
 z-index: 9;
 
-top: 30px;
+bottom: 0;
 left: 150px;
 @media (min-width: 768px) {
 width: 350px;
@@ -96,7 +90,7 @@ left: 400px;
 }
 
 @media (min-width: 1024px) {
-margin: 50px;
+
 position: static;
 opacity: 1;
 
@@ -107,8 +101,11 @@ opacity: 1;
 const ImageDiv = styled.div`
 
 
-@media(min-width: 1024) {
-
+@media(min-width: 1024px) {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 width: 50%;
 }
 
