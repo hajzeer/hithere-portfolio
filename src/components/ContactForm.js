@@ -75,16 +75,16 @@ height: 30px;
 }
 `;
 
-
     const TextAreaStyle = styled.textarea`
-position: relative;
-width: 80%;
-font-size: 15px;
-height: 100px;
-color: #1a1a1a;
-border: 3px #000 solid;
-resize: none;
-margin-top: 20px;
+            text-align: center;
+      position: relative;
+      width: 80%;
+      font-size: 15px;
+      height: 100px;
+      color: #1a1a1a;
+      border: 3px #000 solid;
+      resize: none;
+      margin-top: 20px;
 
 &:focus {
   outline: none;
@@ -113,7 +113,7 @@ height: 150px;
     const SendButtonStyle = styled.button`
 margin: 15px;
 width: 80%;
-height: 20px;
+height: auto;
 border-radius: 25px;
 background-color: #1a1a1a;
 border-color: #1a1a1a;
@@ -142,7 +142,7 @@ height: 40px;
 
 width: 20%;
 font-size: 15px;
-height: 20px;    
+  height: auto;
 }
 
 }
@@ -271,24 +271,40 @@ height: 20px;
         const service_id = process.env.GATSBY_SERVICE_ID;
         const template_id = process.env.GATSBY_TEMPLATE_ID;
         const user_id = process.env.GATSBY_USER_ID;
+        if(
+            name.value === '' ||
+            email.value === '' ||
+            subject.value === '' ||
+            message.value === ''
+        ) {
+            if(name.value === '') {
+                name.value = 'UZUPEŁNIJ POLE';
+            } if (email.value === '') {
+                email.value = 'UZUPEŁNIJ POLE';
+            } if (message.value === '') {
+                message.value = 'UZUPEŁNIJ POLE';
+            } if (subject.value === '') {
+                subject.value = 'UZUPEŁNIJ POLE';
+            }
+        } else {
+            emailjs.send(service_id,template_id,{
+                subject: subject.value,
+                name: name.value,
+                email: email.value,
+                message: message.value,
+            },user_id)
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, (err) => {
+                    console.log('FAILED...', err);
+                });
 
+            name.value = ''
+            email.value = ''
+            subject.value = ''
+            message.value = ''
+        }
 
-        emailjs.send(service_id,template_id,{
-            subject: subject.value,
-            name: name.value,
-            email: email.value,
-            message: message.value,
-        },user_id)
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            }, (err) => {
-                console.log('FAILED...', err);
-            });
-
-        name.value = ''
-        email.value = ''
-        subject.value = ''
-        message.value = ''
     }
 
 
