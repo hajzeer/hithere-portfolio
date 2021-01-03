@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import PortfolioList from "./PortfolioList";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
 import SrebrnaCmaImageDesktop from '../images/srebrnacmaDesktop.png';
 import SrebrnaCmaImageMobile from '../images/srebrnacmaMobile.png';
@@ -11,7 +12,6 @@ import SymetriaImageDesktop from '../images/SymetriaDesktop.png';
 import SymetriaImageMobile from '../images/SymetriaMobile.png';
 import AutoserwisImageDesktop from '../images/AutoserwisDesktop.png';
 import AutoserwisImageMobile from '../images/AutoserwisMobile.png';
-import gsap from "gsap";
 
 const PortfolioDivStyled = styled.div`
 
@@ -41,7 +41,7 @@ const PortfolioItems = [
         name: 'Symetria Promienista',
         imageDesktop: SymetriaImageDesktop,
         imageMobile: SymetriaImageMobile,
-        websiteUrl: 'https://symetriapromienista.netlify.app/',
+        websiteUrl: 'https://symetria-promienista.netlify.app/',
     },
     {
         id: 3,

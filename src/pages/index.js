@@ -9,7 +9,6 @@ import Services from "../components/Servises";
 import ContactForm from "../components/ContactForm";
 import Hamburger from "../components/Hamburger";
 import SEO from "../components/seo"
-import logo from "../images/image.png"
 
 
 const GlobalStyle = createGlobalStyle`

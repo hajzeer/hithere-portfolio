@@ -7,7 +7,6 @@ import ContactForm from "../components/ContactForm";
 import Hamburger from "../components/Hamburger";
 import HeaderContact from "../components/Header-contact";
 import SEO from "../components/seo";
-import logo from "../images/image.png"
 
 const GlobalStyle = createGlobalStyle`
 
