@@ -17,5 +17,5 @@ demo: [hitherestudio.eu](https://hitherestudio.eu/en/)
 ```
 1. npm
 2. cd hithere_portfolio
-3. np run serve
+3. gatsby develop
 ```
