@@ -178,7 +178,7 @@ font-size: 15px;
     `;
 
     const SocialButtonStyled = styled.button`
-    
+    cursor: pointer;
     width: 30px;
     height: 30px;
     background: transparent;
@@ -187,7 +187,7 @@ font-size: 15px;
     `;
 
     const FacebookIconStyled = styled.i`
-
+      cursor: pointer;
     box-sizing: border-box;
     position: relative;
     display: block;
