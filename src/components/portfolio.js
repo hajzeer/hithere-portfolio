@@ -33,7 +33,7 @@ const PortfolioItems = [
         name: 'Grupa CODA',
         imageDesktop: GrupaCODAImageDesktop,
         imageMobile: GrupaCODAImageMobile,
-        websiteUrl: 'https://codagroup.netlify.app/',
+        websiteUrl: 'https://grupacoda.pl/',
 
     },
     {
