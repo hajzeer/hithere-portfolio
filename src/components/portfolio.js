@@ -10,8 +10,8 @@ import GrupaCODAImageDesktop from '../images/codaDesktop.png';
 import GrupaCODAImageMobile from '../images/codaMobile.png';
 import SymetriaImageDesktop from '../images/SymetriaDesktop.png';
 import SymetriaImageMobile from '../images/SymetriaMobile.png';
-import AutoserwisImageDesktop from '../images/AutoserwisDesktop.png';
-import AutoserwisImageMobile from '../images/AutoserwisMobile.png';
+import HomeArtDesktop from '../images/HomeArtDesktop.png';
+import HomeArtMobile from '../images/HomeArtMobile.png';
 
 const PortfolioDivStyled = styled.div`
 
@@ -45,10 +45,10 @@ const PortfolioItems = [
     },
     {
         id: 3,
-        name: 'Autoserwis',
-        imageDesktop: AutoserwisImageDesktop,
-        imageMobile: AutoserwisImageMobile,
-        websiteUrl: 'https://autoserwis-lakiernictwo.pl/',
+        name: 'Home Art',
+        imageDesktop: HomeArtDesktop,
+        imageMobile: HomeArtMobile,
+        websiteUrl: 'https://home-art.org/',
     }
 ]
 
